@@ -275,3 +275,9 @@ MCP 连通正常，Oracle 为 11g 11.2.0.4.0。阶段 0.5 查询继续全部串�
 - 字段注释、物理主键和表注释来自 MCP `describe_table`/`search_tables`，这些元数据调用不伪装为 SQL。
 - 未运行任何回测或实现代码，未创建应用框架，未 commit、未 push。
 - 阶段 0.5 未发现 ETF 正式 EOD 表。仍无法验证：历史 ETF 板块代码官方字典、tracking-index 初始公告时间、逐月全历史集合竞价稳定性、Layer C 缺失收盘竞价时的最终估值规则，以及退市 ETF 全量完整性。
+
+## 13. 外部数据补充方案状态（阶段 0.6）
+
+本节只记录外部候选源，不改变 WDZX 自身能力结论。2026-09-17 使用隔离环境中的 AKShare 1.18.95 实测：`fund_etf_spot_em` 当前快照成功返回 1,618 个唯一代码，与 WDZX 2026-09-16 的 1,667 只有效 ETF 交集 1,614，覆盖率 96.82%；53 个 WDZX-only 标的均为固收 ETF。核心 `fund_etf_hist_em` 对 `510300` 的未复权、前复权、后复权请求均在限定重试后远端断连，没有获得历史 DataFrame。
+
+因此 AKShare 在本环境中尚不能作为已经验证的 ETF EOD 补充源，Oracle 的正式 ETF EOD 缺口仍然存在。详细证据、调用失败与当前横截面差异见 `docs/akshare_etf_eod_audit.md` 和 `docs/akshare_probe_manifest.md`；不得用 AKShare 当前列表替代 WDZX 历史 PIT 池。

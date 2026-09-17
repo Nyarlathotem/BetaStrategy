@@ -1,0 +1,7 @@
+interface,canonical_code,akshare_symbol,start_date,end_date,adjust_mode,purpose,requested_at_cst,duration_seconds,status,attempts,retries,row_count,first_date,last_date,sha256,error_type
+fund_etf_hist_em,510300.SH,510300,20260817,20260916,raw,smoke,2026-09-17T11:34:04+08:00,11.433398,request_failed,4,3,,,,,ConnectionError
+fund_etf_hist_em,510300.SH,510300,20260817,20260916,qfq,smoke,2026-09-17T11:34:15+08:00,11.226738,request_failed,4,3,,,,,ConnectionError
+fund_etf_hist_em,510300.SH,510300,20260817,20260916,hfq,smoke,2026-09-17T11:34:26+08:00,11.148992,request_failed,4,3,,,,,ConnectionError
+fund_etf_hist_em,510300.SH,510300,20260817,20260916,raw,repeat-1,2026-09-17T11:34:38+08:00,10.704950,request_failed,4,3,,,,,ConnectionError
+fund_etf_hist_em,510300.SH,510300,20260817,20260916,raw,repeat-2,2026-09-17T11:34:48+08:00,10.988368,request_failed,4,3,,,,,ConnectionError
+fund_etf_spot_em,,,,,,current-snapshot,2026-09-17T11:37:13+08:00,26.371703,success,1,0,1618,,,e973eb2d8c9686380b8c0a747b8b37806ac053cca128edaeaf00bfc3906fdfaf,

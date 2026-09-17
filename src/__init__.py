@@ -1,0 +1,2 @@
+"""BetaStrategy source package."""
+
